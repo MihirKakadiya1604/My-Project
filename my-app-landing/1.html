@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Stack Developer Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+      body {
+        background: #0c0c2d;
+        color: #fff;
+        font-family: 'Segoe UI', sans-serif;
+      }
+   .hero {
+      
+      padding: 100px 200px 30px;
+    }
+    .hero h1 {
+      font-size: 4.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.3;
+    } 
+    .btn-gradient {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      border: none;
+      color: white;
+    }
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .about-me {
+      padding: 40px 20px;
+    }
+    .about-me img {
+      border: 5px solid #00bfff;
+      border-radius: 5px;
+      width: 100%;
+      max-width: 250px;
+    }
+    .portfolio-tabs {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .portfolio-tabs a {
+      color: white;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+    .project {
+      margin: 60px 0;
+    }
+    .project img {
+      width: 100%;
+      border: 5px solid #00bfff;
+      border-radius: 5px;
+    }
+    .read-more {
+      display: block;
+      margin-top: 10px;
+      color: #00bfff;
+      text-decoration: none;
+    }
+    .view-all {
+      text-align: center;
+      margin: 60px 0;
+    }
+      h1, h2, h3, h4, h5 {
+        font-family: 'Playfair Display', serif;
+        color: #fff;
+      }
+      .navbar {
+        background: #0c0c2d;
+        padding: 1rem 0;
+      }
+      .navbar-brand {
+        color: #fff;
+        font-weight: bold;
+        font-size: 24px;
+      }
+      .nav-link {
+        color: #fff;
+        margin: 0 10px;
+      }
+      .nav-link:hover, .navbar-brand:hover {
+        color: #00d9ff;
+      }
+      .btn-theme {
+        background: linear-gradient(90deg, #5766f4, #8b43f5);
+        color: #fff;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 5px;
+      }
+
+      .hero-section {
+        text-align: center;
+        padding: 100px 0 50px;
+      }
+      .hero-section h1 {
+        font-size: 3rem;
+        line-height: 1.5;
+      }
+      .about-section {
+        padding: 60px 0;
+        text-align: center;
+      }
+      .about-img {
+        border: 8px solid #00cfff;
+        border-radius: 10px;
+        padding: 5px;
+        display: inline-block;
+        position: relative;
+      }
+
+      
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .service-box {
+      background-color: #0b0e2c;
+      border: 2px solid transparent;
+      border-radius: 12px;
+      padding: 25px;
+      color: #ffffff;
+      box-shadow: 0 0 30px rgba(90, 225, 247, 0.2);
+      transition: 0.4s ease-in-out;
+    }
+
+    .service-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 40px rgba(90, 225, 247, 0.7);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .service-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .service-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .service-text {
+      font-size: 14px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .glow-blue {
+      border: 2px solid #00e0ff;
+      box-shadow: 0 0 20px #00e0ff;
+    }
+
+    .glow-purple {
+      border: 2px solid #a44afe;
+      box-shadow: 0 0 20px #a44afe;
+    }
+
+    .services-section {
+      padding: 80px 0;
+    }
+      .tab-btn {
+        border: 1px solid #00cfff;
+        background: transparent;
+        color: #fff;
+        margin: 5px;
+        padding: 5px 15px;
+        border-radius: 5px;
+      }
+      .glow-box {
+        background: #11114d;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+        margin-bottom: 30px;
+      }
+      .glow-box img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .experience-icons i {
+        font-size: 2.5rem;
+        margin: 20px;
+      }
+      .contact-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #1d0d3c 0%, #4319a0 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20% 20% 0 0 ;
+    }
+
+    .contact-section::before,
+    .contact-section::after {
+      content: "";
+      position: absolute;
+   background: 
+  radial-gradient(circle at top left, rgba(255, 255, 255, 0.473), transparent 90%),
+  radial-gradient(circle at top right, rgba(255, 255, 255, 0.473), transparent 70%),
+  radial-gradient(circle at bottom, rgba(255, 255, 255, 0.473), transparent 70%);
+      
+      width: 400px;
+      height: 400px;
+      border-radius: 100%;
+    }
+
+    .contact-section::before {
+      top: -100px;
+      left: -100px;
+    }
+
+    .contact-section::after {
+      bottom: -100px;
+      right: -100px;
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 60px;
+      color: #fff;
+    }
+
+    .contact-info h4 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      color: #ccc;
+    }
+
+    .info-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .info-box i {
+      font-size: 20px;
+      color: white;
+      background: #3e55b8;
+      padding: 15px;
+      border-radius: 15px;
+      margin-right: 15px;
+      
+    }
+
+    .contact-form {
+      background: linear-gradient(135deg, #2a3484, #5c1dd8);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      border-radius: 5% ;
+    }
+
+    .form-control {
+      background: #111;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .form-control::placeholder {
+      color: #aaa;
+    }
+
+    .btn-send {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn-send:hover {
+      background: #333;
+    }
+
+    .footer {
+    
+      color: #ccc;
+
+      text-align: center;
+    }
+
+    .footer .social-icons a {
+      display: inline-block;
+      background: linear-gradient(135deg, #3a3a8a, #5e1ee7);
+      color: white;
+      margin: 0 8px;
+      padding: 10px 14px;
+      border-radius: 15px;
+      font-size: 18px;
+      transition: transform 0.3s;
+    }
+
+    .footer .social-icons a:hover {
+      transform: scale(1.1);
+    }
+
+    .footer-logo {
+      font-weight: bold;
+      font-size: 24px;
+      margin-top: 20px;
+      color: white;
+    }
+
+    .footer small {
+      display: block;
+      margin-top: 10px;
+    }
+    </style>
+  </head>
+  <body>
+   <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Mihir Kakadiya</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+        >
+      
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="btn btn-theme" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+ 
+    
+
+   <div class="hero" id="home">
+    <p>I'm a</p>
+    <h1>Full Stack<br />Software<br />Developer<span style="color:#00bfff">..</span></h1>
+    <button class="btn btn-gradient mt-3 px-4 py-2">Previous Projects</button>
+  </div>
+<br>
+  <div class="container about-me " id="about">
+    <div class="row align-items-center text-center text-md-left">
+      <div class="col-md-4 mb-3 mb-md-0">
+        <img src="./me.jpg" alt="Profile" class="mx-auto d-block" />
+      </div>
+      <div class="col-md-8">
+        <h5 class="section-title">About Me</h5>
+        <p>        My name is Mihir Kakadiya, and I am pursuing a Bachelor of Computer
+          Applications (BCA) at the President Institute of Computer
+          Applications, where I specialize in full-stack development. I have
+          developed a strong foundation in various technologies, including HTML,
+          CSS, Bootstrap, C, C++, JavaScript, and ReactJS. Additionally, I am
+          further honing my technical skills at a creative design and multimedia
+          institute, which is helping me build a solid foundation for a
+          successful career in web development..</p>
+        <button class="btn btn-gradient mr-2 px-4 my-1">Hire Me</button>
+        <button class="btn btn-outline-light px-4 my-1">Resume</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-tabs" id="portfolio">
+    <h5 class="section-title">Portfolio</h5>
+    <a href="#">Mobile App</a>
+    <a href="#">Website</a>
+    <a href="#">Desktop</a>
+    <a href="#">Other Projects</a>
+  </div>
+
+  <div class="container">
+    
+    <div class="row project align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h6 class="text-info">PROJECT 1</h6>
+        <h5>Dating Mobile App Design</h5>
+        <p>This Project 1 will design a dating app focusing on a user-friendly interface, strong security features, and a personalized matching algorithm, aiming to connect users with compatible partners in a safe and engaging way. The app will incorporate features like detailed profiles, verified user authentication, and a customizable matching system based on interests and preferences...</p>
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="col-md-6">
+        <img src="./Dating Mobile App Design.jpg" alt="Project 1" />
+      </div>
+    </div>
+
+  
+    <div class="row project align-items-center flex-md-row-reverse">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h6 class="text-info">PROJECT 2</h6>
+        <h5>E-Commerce Mobile App Design</h5>
+        <p>An e-commerce mobile app design should focus on providing a seamless and intuitive shopping experience. Key elements include clear navigation, a robust search function, comprehensive product catalogs with detailed information, filtering and sorting options, user-friendly product pages, secure authentication and checkout processes. The app should also prioritize user interface (UI) aesthetics, including color palettes, fonts, and overall style, along with a thoughtful user experience (UX) design that prioritizes functionality and ease of use...</p>
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="col-md-6">
+        <img src="./E-Commerce Mobile.webp" alt="Project 2" />
+      </div>
+    </div>
+
+   
+    <div class="row project align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h6 class="text-info">PROJECT 3</h6>
+        <h5>Fitness Mobile App Design</h5>
+        <p>A well-designed fitness mobile app can significantly motivate users to achieve their health and fitness goals by providing personalized workout plans, tracking progress, and offering a supportive community. The app should prioritize user-friendly navigation, interactive features, and gamification elements to keep users engaged. A key aspect is the ability to connect with fitness professionals or other users for support and motivation...</p>
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="col-md-6">
+        <img src="./Fitness Mobile App.png" alt="Project 3" />
+      </div>
+    </div>
+
+  
+    <div class="row project align-items-center flex-md-row-reverse">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h6 class="text-info">PROJECT 4</h6>
+        <h5>Modelling Mobile App Design</h5>
+        <p>Project 4: Modeling Mobile App Design involves creating a visual and interactive plan for a mobile application, focusing on both user interface (UI) and user experience (UX) design. This project requires understanding user needs, defining core functionalities, creating wireframes and mockups, and potentially exploring different design approaches like prototyping tools or coding. The goal is to deliver a well-structured, user-friendly, and visually appealing mobile application. ...</p>
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="col-md-6">
+<img src="./Modelling Mobile App.webp"  alt="Project 4">
+      </div>
+    </div>
+
+   
+    <div class="view-all">
+      <button class="btn btn-gradient px-5 py-2">View all</button>
+    </div>
+  </div>
+<br>
+<br>
+   <div class="container services-section" id="services">
+    <h2 class="section-title">Services</h2>
+    <div class="row">
+    
+      <div class="col-md-6 col-lg-6 mb-4">
+        <div class="service-box glow-blue">
+          <div class="service-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/video-editing.png" alt="Video Editing">
+          </div>
+          <div class="service-title">Video Editing</div>
+          <div class="service-text">
+          Video editing involves manipulating and arranging video footage, audio, and other visual elements to create a cohesive and engaging final product. It's a crucial post-production step in filmmaking, television, and various other video-related fields, impacting the overall viewing experience and influencing the emotional connection with the audience...
+          </div>
+        </div>
+      </div>
+
+ 
+      <div class="col-md-6 col-lg-6 mb-4">
+        <div class="service-box glow-purple">
+          <div class="service-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/smartphone-tablet.png" alt="Mobile App">
+          </div>
+          <div class="service-title">Mobile App Development</div>
+          <div class="service-text">
+            Mobile app development is the process of creating software applications designed to run on mobile devices like smartphones and tablets. It involves various stages, including planning, design, development, testing, and release, encompassing everything from initial concept to deployment in app stores. These applications offer users convenient access to services, information..
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-6 mb-4">
+        <div class="service-box glow-blue">
+          <div class="service-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/monitor.png" alt="Desktop App">
+          </div>
+          <div class="service-title">Desktop App Development</div>
+          <div class="service-text">
+          Desktop app development involves creating software that runs on computers, like Windows, macOS, or Linux, without needing an internet connection. These applications are designed for use on desktops and laptops and can often access hardware drivers, making them ideal for tasks like media editing or specialized software where offline functionality is crucial..
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="col-md-6 col-lg-6 mb-4">
+        <div class="service-box glow-purple">
+          <div class="service-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/code.png" alt="Programming">
+          </div>
+          <div class="service-title">Programming Languages</div>
+          <div class="service-text">
+     A programming language is a set of symbols, grammars and rules with the help of which one is able to translate algorithms to programs that will be executed by the computer. The programmer communicates with a machine using programming languages. Most of the programs have a highly structured set of rules.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+<br>
+    <section id="experience" class="section text-center" >
+      <div class="container">
+     <h2>Experience</h2>
+        <div class="row mt-4">
+          <div class="col">
+            <i class="fab fa-css3-alt fa-4x"></i>
+            <p>CSS</p>
+          </div>
+          <div class="col">
+            <i class="fab fa-react fa-4x"></i>
+            <p>React</p>
+          </div>
+          <div class="col">
+            <i class="fab fa-html5 fa-4x"></i>
+            <p>HTML</p>
+          </div>
+          <div class="col">
+            <i class="fab fa-4x fa-bootstrap"></i>
+            <p>Bootstrap</p>
+          </div>
+
+          <div class="col">
+            <i class="fab fa-js-square fa-4x"></i>
+            <p>JavaScript</p>
+        </div>
+      </div>
+      </div>
+    </section>
+  
+<section id="contact" class="contact-section">
+    <div class="container">
+      <h2>CONTACT</h2>
+      <div class="row">
+        <div class="col-md-6 contact-info">
+          <h4>Drop Me a Message</h4>          
+
+          <div class="info-box">
+            <i class="fas fa-phone"></i>
+            <span>+91 9106472796</span>
+          </div>
+          <div class="info-box">
+            <i class="fas fa-envelope"></i>
+            <span>mihirkakadiya1906@gmail.com</span>
+          </div>
+          <div class="info-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>House No: 07 Nikol, Aemedabad,<br>382350, india</span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <form class="contact-form">
+            <input type="text" class="form-control" placeholder="Name">
+            <input type="email" class="form-control" placeholder="Email">
+            <textarea rows="4" class="form-control" placeholder="Message"></textarea>
+            <button type="submit" class="btn btn-send">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+ <footer class="footer  text-white py-3">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
+      <div class="footer-logo mb-2 mb-md-0"><B>MK</B></div>
+      <div class="social-icons mb-2 mb-md-0">
+        <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-behance"></i></a>
+      </div>
+      <small>2025 – CDMI, All rights reserved</small>
+    </div>
+  </div>
+</footer>
+  </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

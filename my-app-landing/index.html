@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyApp Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+ 
+  
+</head>
+<style>
+  
+    body {
+      font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #fef9f4;
+      color: #333;
+    }
+
+    .navbar {
+      background: #222;
+    }
+
+    .navbar-nav .nav-link {
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ffc107 !important;
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75)),
+        url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center center/cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+
+    .btn-custom {
+      background: linear-gradient(to right, #6c757d, #495057);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+    }
+
+    .btn-custom:hover {
+      box-shadow: 0px 0px 15px rgba(108, 117, 125, 0.8);
+      transform: translateY(-2px);
+    }
+
+    .features .card {
+      border: none;
+      padding: 25px;
+      background: #ffffff;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 0.75rem;
+    }
+
+#features .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+#features .card:hover {
+  transform: scale(1.05);
+  background-color: #f8f9fa !important; /* a light gray-blue tint */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+    .features .card i {
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+   #features .card:hover i {
+  transform: scale(1.25);
+  color: #0d6efd;
+}
+
+
+    .testimonial {
+      background: #f8f9fa;
+      padding: 60px 0;
+    }
+
+    .testimonial blockquote {
+      font-size: 1.2rem;
+      font-style: italic;
+      transition: color 0.3s;
+    }
+
+    .testimonial blockquote:hover {
+      color: #0d6efd;
+    }
+
+    .newsletter {
+      background: linear-gradient(to right, #34495e, #2c3e50);
+      color: white;
+      padding: 60px 20px;
+      border-radius: 0.5rem;
+    }
+
+    .newsletter input:focus {
+      box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.4);
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      padding: 20px 0;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #ffc107 !important;
+      text-decoration: underline;
+    }
+
+    footer .bi {
+      transition: transform 0.3s ease, color 0.3s;
+    }
+
+    footer .bi:hover {
+      transform: scale(1.2);
+      color: #0d6efd;
+    }
+
+    h2, h5 {
+      font-weight: bold;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      letter-spacing: 0.5px;
+      line-height: 1.3;
+      color: #4d7fb0;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #0d6efd;
+      margin: 12px auto 0;
+      border-radius: 2px;
+    }
+
+    .btn {
+      border-radius: 0.3rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    input, textarea {
+      border-radius: 0.25rem;
+      transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #0d6efd;
+      box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    }
+
+
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #0d6efd;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+
+</style>
+<body>
+
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-white" href="#">MyApp</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-white" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#download">Download</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#testimonials">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#newsletter">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <section class="hero d-flex align-items-center text-center bg-primary text-white py-5" style="min-height: 100vh;">
+    <div class="container">
+      <h1>Boost Your Life with SuperApp</h1>
+      <p class="lead">Plan smarter. Live better. Stay ahead — all in one app.</p>
+      <a href="#download" class="btn btn-lg btn-light mt-4 px-4">Get the App</a>
+    </div>
+  </section>
+
+  
+  <section class="py-5 text-center" id="features">
+    <div class="container">
+      <h2 class="mb-4 fw-bold">App Features</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card p-4 shadow-sm h-100">
+            <i class="bi bi-speedometer2 display-4 text-primary"></i>
+            <h5 class="mt-3 fw-bold">Fast & Efficient</h5>
+            <p>Optimized for performance, ensuring seamless interactions.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 shadow-sm h-100">
+            <i class="bi bi-shield-lock-fill display-4 text-primary"></i>
+            <h5 class="mt-3 fw-bold">Top Security</h5>
+            <p>Protecting user data with industry-grade encryption.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 shadow-sm h-100">
+            <i class="bi bi-phone display-4 text-primary"></i>
+            <h5 class="mt-3 fw-bold">Cross-Platform</h5>
+            <p>Designed for Android and iOS with smooth performance.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 shadow-sm h-100">
+            <i class="bi bi-cloud-arrow-down display-4 text-primary"></i>
+            <h5 class="mt-3 fw-bold">Cloud Sync</h5>
+            <p>Access your data anytime, anywhere with seamless cloud integration.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 shadow-sm h-100">
+            <i class="bi bi-lightbulb-fill display-4 text-primary"></i>
+            <h5 class="mt-3 fw-bold">Smart AI Assistance</h5>
+            <p>Leverages AI to provide personalized recommendations and insights.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 shadow-sm h-100">
+            <i class="bi bi-graph-up display-4 text-primary"></i>
+            <h5 class="mt-3 fw-bold">Analytics & Reports</h5>
+            <p>Gain valuable insights with advanced data analytics and reports.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="bg-light py-5 text-center" id="download">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Download the App</h2>
+      <p class="mb-4 text-muted">Start your journey with MyApp – available on major platforms.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="#" class="btn btn-dark btn-lg">
+          <i class="bi bi-apple me-2"></i>Download on the App Store
+        </a>
+        <a href="#" class="btn btn-success btn-lg">
+          <i class="bi bi-google-play me-2"></i>Get it on Google Play
+        </a>
+      </div>
+      <p class="mt-3 text-muted">Compatible with iOS 12+ and Android 9.0+</p>
+    </div>
+  </section>
+
+  
+  <section class="bg-white py-5" id="testimonials">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-5">What Our Users Say</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-5">
+          <div class="p-4 border rounded shadow-sm h-100">
+            <p><i class="bi bi-chat-quote-fill text-primary fs-4 me-2"></i>"MyApp transformed the way I manage my tasks daily. Highly recommend!"</p>
+            <h6 class="fw-bold mt-3 mb-0">Jane D.</h6>
+            <small class="text-muted">Freelancer</small>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="p-4 border rounded shadow-sm h-100">
+            <p><i class="bi bi-chat-quote-fill text-primary fs-4 me-2"></i>"The best app I’ve used so far! Sleek design and top performance."</p>
+            <h6 class="fw-bold mt-3 mb-0">Mark R.</h6>
+            <small class="text-muted">Product Manager</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="testimonial text-center py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4">Loved by Thousands</h2>
+      <blockquote class="blockquote">
+        “This app literally saved my business and personal life. Highly recommended!”
+        <footer class="blockquote-footer mt-2">Alex Morgan, Entrepreneur</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  
+  <section class="py-5 text-center" id="contact">
+    <div class="container">
+      <h2 class="section-title fw-bold mb-3">Get in Touch</h2>
+      <p class="text-muted mb-4">Need help or have questions? Our support team is available 24/7.</p>
+      <a href="mailto:support@myapp.com" class="btn btn-outline-primary btn-lg">
+        <i class="bi bi-envelope-fill me-2"></i>Email Support
+      </a>
+      <p class="mt-3 text-muted small">We typically respond within 1–2 business hours.</p>
+    </div>
+  </section>
+
+  <section class="about-section py-5" id="about">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="./img/2.webp" alt="App Overview" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-md-6">
+          <h2 class="mb-3">About MyApp</h2>
+          <p class="text-muted">
+            MyApp streamlines daily tasks with smart management, secure cloud storage, and intelligent reminders. Whether you're a student, professional, or entrepreneur, MyApp keeps you organized and productive.
+          </p>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>User-friendly Interface</strong> for seamless navigation.</li>
+            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>24/7 Customer Support</strong> ensuring reliability.</li>
+            <li><i class="bi bi-check-circle text-success me-2"></i><strong>Regular Updates</strong> with innovative features.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-5 bg-dark text-white">
+    <div class="container">
+      <!-- Newsletter -->
+      <section class="newsletter py-4" id="newsletter">
+        <h2 class="fw-bold mb-3">Stay Updated</h2>
+        <p class="mb-4 fs-5">Join our newsletter for product updates, exclusive offers, and productivity tips straight to your inbox.</p>
+        <form class="row justify-content-center g-3" novalidate>
+          <div class="col-md-6">
+            <label for="newsletter-email" class="visually-hidden">Email address</label>
+            <input type="email" class="form-control form-control-lg" id="newsletter-email" placeholder="Enter your email" required>
+          </div>
+          <div class="col-md-auto">
+            <button type="submit" class="btn btn-light btn-lg px-4">Subscribe</button>
+          </div>
+        </form>
+        <p class="mt-3 small opacity-75">We respect your privacy. Unsubscribe at any time.</p>
+      </section>
+
+      <hr class="my-4 opacity-50">
+
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">MyApp</h5>
+          <p class="small">Empowering your life with smart solutions.</p>
+          <small>© 2025 MyApp. All rights reserved.</small>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#features" class="text-white text-decoration-none">Features</a></li>
+            <li><a href="#about" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="#contact" class="text-white text-decoration-none">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Follow Us</h5>
+          <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+      <hr class="my-4 opacity-50">
+
+      <p class="small opacity-75">Privacy Policy | Terms & Conditions</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+
+
+body {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  scroll-behavior: smooth;
+background-color: #fef9f4;
+
+
+
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+ background: #222;
+}
+
+
+.navbar-nav .nav-link {
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffc107 !important;
+  text-decoration: underline;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.hero {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75)),
+    url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center center/cover;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: background 0.5s;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+.btn-custom {
+  background: linear-gradient(to right, #6c757d, #495057);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  transition: box-shadow 0.3s ease, transform 0.2s;
+}
+
+.btn-custom:hover {
+  box-shadow: 0px 0px 15px rgba(108, 117, 125, 0.8);
+  transform: translateY(-2px);
+}
+
+.features .card {
+  border: none;
+  padding: 20px;
+  background: #ffffff;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.features .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.features .card i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.features .card:hover i {
+  transform: scale(1.2);
+  color: #0d6efd; 
+}
+
+.testimonial {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+.testimonial blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  transition: color 0.3s;
+}
+
+.testimonial blockquote:hover {
+  color: #0d6efd;
+}
+
+.newsletter {
+  background: linear-gradient(to right, #34495e, #2c3e50);
+  color: white;
+  padding: 60px 20px;
+}
+
+.newsletter input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.4);
+}
+
+footer {
+  background: #222;
+  color: white;
+  padding: 20px;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffc107 !important;
+  text-decoration: underline;
+}
+
+footer .bi {
+  transition: transform 0.3s ease, color 0.3s;
+  color: #ffffff;
+}
+
+footer .bi:hover {
+  transform: scale(1.2);
+  color: #0d6efd;
+}
+
+h2, h5 {
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.6;
+}
+
+
+
+
+section {
+  padding: 80px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  color: #4d7fb0;
+}
+
+
+.btn {
+  border-radius: 0.3rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+
+input, textarea {
+  border-radius: 0.25rem;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+input:focus, textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #0d6efd;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
